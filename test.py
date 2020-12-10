@@ -128,8 +128,8 @@ class Net(torch.nn.Module):
     
             return x
         
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-#device = torch.device('cpu')
+#device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device('cpu')
 print("device:", device)
 model = Net().to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=0.0005)
